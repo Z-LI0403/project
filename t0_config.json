@@ -1,0 +1,152 @@
+{
+  "protocol_id": "T0-CURRENT-THEORY-NUMERICAL-VALIDATION-v1.4-D-FLOAT32-RUNTIME-RESOLUTION",
+  "plan_status": "AMENDED_V1_4_IMPLEMENTATION_READY_AWAITING_HUMAN_T0_FINAL_RERUN",
+  "plan_path": "T0_THEORY_NUMERICAL_VALIDATION_PLAN.md",
+  "results_root": "experiments/theory_validation/t0/results",
+  "dtype": "float64",
+  "source_lock": {
+    "recursive_roots": [
+      "proofs/gaussian_interface_gap",
+      "proofs/gaussian_endpoint_boundaries",
+      "proofs/h01_fwv1_covariance_robustness",
+      "proofs/h01_fwv1_final_theory_closure",
+      "proofs/h01_fwv1_three_tap_integrated_policy",
+      "proofs/h01_fwv1_three_tap_snr_optimization",
+      "proofs/h02_post_projection_information_boundary",
+      "proofs/haar_matched_specialization"
+    ],
+    "files": {
+      "experiments/controlled_protocol/M1_THEORY_ALIGNED_PROTOCOL.md": "6d55bfe0a3e50f13bcc3ac5b6871497d6bf252e749bd56a55ff27e3604714019",
+      "experiments/controlled_protocol/e1/e1_impl.py": "db2e5643d3f95f0bdfa31d484c70a288107ba48e2a3fae4305e22698314e9318",
+      "experiments/controlled_protocol/e2/e2_config.yaml": "02ae613f16491de9ff41bca04f9fb3ff26bc0951dabf81f2ee3032bb3fc8772a",
+      "experiments/controlled_protocol/e2/e2_impl.py": "95d01c21f0571123a3e512dda35f3fb6ac5050399c294d1530e0e9b409997a89",
+      "experiments/theory_validation/t0/T0_PROTOCOL_AMENDMENT_A_INV_02.md": "3b00f64e79b84c3b6f178cd1a4f4a204ec1b1ba14b75ad2c94bc943d04a457bf",
+      "experiments/theory_validation/t0/T0_PROTOCOL_AMENDMENT_B_OPT_FLOAT64_IDENTIFIABILITY.md": "6810c3ebcabcbd975f83b68ed1db20db698ee962f0e15e4d1f26990dceed428f",
+      "experiments/theory_validation/t0/T0_PROTOCOL_AMENDMENT_C_BOUNDARY_NUMERICAL_RESOLUTION.md": "a637549971337a1769e39594dbccd810f7e3ec363c89db7b7a8d3b3db7c356d8",
+      "experiments/theory_validation/t0/T0_PROTOCOL_AMENDMENT_D_FLOAT32_RUNTIME_RESOLUTION.md": "6b292550bf5b42ad5c1b5a35889b6754b826f82c139ded6f53efd865b73002e1",
+      "notes/claims.md": "7c6f4f54910ecabcc029e46987f2c731112ae0a30a400e3bfdf47dbb3cbeb5f4",
+      "proofs/gaussian_endpoint_boundaries/INDEPENDENT_REVIEW.md": "28d00064f3d6a5369650cccf2e623e2be1f0fa712822102d8a6717999d8a739a",
+      "proofs/gaussian_endpoint_boundaries/PROOF_PACKAGE.md": "d48fe04c6ab36b68d6c09e4e11df7476cf8ece7e9aeac0b381398a3f1c56effd",
+      "proofs/gaussian_interface_gap/AGGREGATE_INDEPENDENT_REVIEW.md": "086b0467ce60c5108a68a6c2eddcd0af6038fa226dc71785020b527164b902d0",
+      "proofs/gaussian_interface_gap/PROOF_AUDIT.html": "7787e5691e9ae11218943804ba5bf17f65c670f77ed552bc7fe37f354c656c08",
+      "proofs/gaussian_interface_gap/PROOF_AUDIT.html.review.json": "5c8be28aae0c699744ba15e01bb25e2b4e3ee57526c8b1e9443ca02346fcebf1",
+      "proofs/gaussian_interface_gap/PROOF_AUDIT.json": "29567b7d9034cc787e1fb1d746cc9ea37c78fa763b607bdd0d505a42617b64c9",
+      "proofs/gaussian_interface_gap/PROOF_AUDIT.md": "a8330a07e2f70661a9e6e87e662e9a9cd17910da176f8046c15c5a73263b0ec8",
+      "proofs/gaussian_interface_gap/PROOF_CHECK_STATE.json": "f3d931cedb12e7c488d67f2aec6364be9d25fd9777d63d2976ec1201b081f2ad",
+      "proofs/gaussian_interface_gap/PROOF_PACKAGE.md": "86475ee4385590c6e35c61da56fa58516a352f242c21375da8f2df2ebf006eac",
+      "proofs/gaussian_interface_gap/PROOF_SKELETON.md": "5cb067cd3e705bfc8a0b81d1901ba3e53093a511d1e68bcc86dcfc4ce8571be7",
+      "proofs/gaussian_interface_gap/R2_DEEPSEEK_REVIEW.md": "7261b4d46e5e549a4e22665e42c704a5240893cba467e6f3d23ad0876a725b10",
+      "proofs/gaussian_interface_gap/R2_RECONCILIATION.md": "1db71268ec351e69bf1135676d09fa3d8d91e4bfe40a0c59279b5752d94c0b76",
+      "proofs/gaussian_interface_gap/proof_audit_report.tex": "47e6df8937f2ecc439d7a289e7e20bb2fa87ace2c3ba370b09677f21a170ebee",
+      "proofs/h01_fwv1_covariance_robustness/INDEPENDENT_REVIEW.md": "462a3399a34c20f72dea6f04585fb79f04ba82ccf792c7fe765e88c7e6a736f4",
+      "proofs/h01_fwv1_covariance_robustness/PROOF_PACKAGE.md": "8c570d2f33d1400c46810c2e10a99ac3abe4514975c2d9630b46e8b0345b7d8f",
+      "proofs/h01_fwv1_final_theory_closure/EXACT_OUTPUT.txt": "6dd3f89cbbeb8a210d49b5ab5e348abdbd75a2fa7e978b89e500f0dd98310af3",
+      "proofs/h01_fwv1_final_theory_closure/INDEPENDENT_REVIEW.md": "203b8a8c3cc1bf9b5da2465628078ff15b2ea2a2eae7eaf6a2e79631aba57e8f",
+      "proofs/h01_fwv1_final_theory_closure/PROOF_PACKAGE.md": "17daee1843fc57075e19a87a1bbc5c56add4247227ec935db13593ba6e5cac38",
+      "proofs/h01_fwv1_final_theory_closure/exact_check.py": "d6a8c3b5cc8db9d7b9fa5da127e0cd36ee0bf3de7bf7d4d9eb59c842372a477d",
+      "proofs/h01_fwv1_three_tap_integrated_policy/INDEPENDENT_REVIEW.md": "7840e272a9c9d9c9dd87baa604ed7367b42139efad2d24f07fc050505ee06cf1",
+      "proofs/h01_fwv1_three_tap_integrated_policy/PROOF_PACKAGE.md": "8d8cbe7cd8454903ff6e63519c1dbf2c72a694fa0bfa93bd9d7f77a8b989871f",
+      "proofs/h01_fwv1_three_tap_snr_optimization/EXACT_OUTPUT.txt": "967bf1f2bfb661ff106133462538a06a9728b307eb65579aba35c75867d30dd3",
+      "proofs/h01_fwv1_three_tap_snr_optimization/INDEPENDENT_REVIEW.md": "576f45d077603ae85ae64bd3b63349c34ce393bb74ef3b7a8b83d5384d1d5900",
+      "proofs/h01_fwv1_three_tap_snr_optimization/PROOF_PACKAGE.md": "a14507d94c9d83434d4064c89b36c9d158320c5bc5be71288780948f0e876116",
+      "proofs/h01_fwv1_three_tap_snr_optimization/exact_check.py": "f8f69de1a7e8c02b92c383372ae52f2e4e733daff3cf5a58ee098dbaa67c33db",
+      "proofs/h02_post_projection_information_boundary/INDEPENDENT_REVIEW.md": "ba817e7516d15a2676911fffbf0e789e69247044b52ccc5a966474e697f7ee15",
+      "proofs/h02_post_projection_information_boundary/PROOF_PACKAGE.md": "b3e15c0892f7eaac2400797cbf9e3068dc2bb0da31a642dc8edbbc018919d50e",
+      "proofs/haar_matched_specialization/INDEPENDENT_REVIEW.md": "6649362e19847b651dbf3ad33ca71767bc402edfc0ac83c0db14d0cc8e9abe07",
+      "proofs/haar_matched_specialization/PROOF_PACKAGE.md": "f6abd98fffc11085aceb70758d035f1c110816c5eafe65ae33f382c5e31e5e2e",
+      "research_proposal.md": "9840c1c12475a766d246f1f1a3593fb7d8ccedae51c52ad498d115ed95c4913e",
+      "T0_THEORY_NUMERICAL_VALIDATION_PLAN.md": "bbeeb15b09f1117db5d2dd0d3dddc32a86f8084b585c2319f589d04e6b0f7c41",
+      "theory.md": "4a7f7417aaf6715441fc9bb369cd1671e61015694180756cc4b5384426ec1ae4"
+    }
+  },
+  "seeds": {
+    "a_synthetic": 2026091200,
+    "a_monte_carlo": 2026091202,
+    "b_monte_carlo": 2026091201
+  },
+  "monte_carlo": {
+    "sample_checkpoints": [262144, 524288, 1048576],
+    "batch_size": 8192,
+    "sigma_multiplier": 5.0,
+    "consistency_floor": 1e-10,
+    "risk_half_width_abs": 0.02,
+    "risk_half_width_rel": 0.002,
+    "gap_half_width_abs": 0.01,
+    "gap_half_width_rel": 0.05,
+    "gap_half_width_scale": 0.1
+  },
+  "tolerances": {
+    "scalar_atol": 1e-10,
+    "scalar_rtol": 1e-9,
+    "center_atol": 5e-12,
+    "center_rtol": 5e-12,
+    "matrix_atol": 1e-10,
+    "matrix_rtol": 1e-9,
+    "normalized_residual": 1e-9,
+    "theoretical_zero": 1e-10,
+    "schedule_atol": 5e-13,
+    "schedule_rtol": 5e-13,
+    "hat_negative_floor": -5e-15,
+    "nonnegative_floor": -1e-10,
+    "rank_relative": 1e-12,
+    "condition_gate": 1e12,
+    "subspace_nonzero": 1e-8,
+    "optimizer_interval": 1e-12,
+    "optimizer_parameter": 2e-8,
+    "optimizer_max_iterations": 128,
+    "noise_distinct_final_atol": 1e-8,
+    "clean_coefficient_atol": 1e-8,
+    "clean_coefficient_rtol": 1e-7,
+    "singular_limit_atol": 1e-10
+  },
+  "a": {
+    "generic_cases": [
+      {"id": "A-GEN-01", "d": 4, "m": 1, "q": 2, "lambda": [4, 1, 0, 0], "measurement_singular_values": [1, 1], "a": 0.3, "b": 0.8, "mc": true},
+      {"id": "A-GEN-02", "d": 8, "m": 3, "q": 4, "lambda_logspace": [2, -2, 8], "measurement_logspace": [0, -2, 4], "a": 0.7071067811865476, "b": 0.7071067811865476, "mc": true},
+      {"id": "A-GEN-03", "d": 16, "m": 4, "q": 8, "lambda_prefix_logspace": [1, -1, 10], "lambda_trailing_zeros": 6, "measurement_singular_values": [1, 1, 1, 1, 1, 1, 1, 1], "a": 1.2, "b": 0.2, "mc": true},
+      {"id": "A-GEN-04", "d": 16, "m": 8, "q": 16, "lambda_logspace": [1, -1, 16], "measurement_logspace": [0, -2, 16], "a": 0.6, "b": 0.7, "mc": true},
+      {"id": "A-GEN-05", "d": 32, "m": 8, "q": 12, "lambda_logspace": [1, -1, 32], "measurement_logspace": [0, -2, 12], "a": 0.9, "b": 0.4, "mc": true}
+    ]
+  },
+  "b": {
+    "core_tau_tokens": ["1e-6", "1e-4", "1e-2", "0.1", "7/47", "1", "10", "1e2", "1e4", "1e6"],
+    "dense_tau_logspace": [-6, 6, 241],
+    "core_rho_tokens": ["-4", "-1", "-0.75", "-0.51", "-0.49", "-0.25", "0", "0.25", "8/25", "0.5", "1", "4"],
+    "dense_rho": [-4, 4, 401],
+    "factorization_tau_tokens": ["1e-4", "1", "1e4"],
+    "subspace_pairs": [["1e-4", "0.1"], ["1e-2", "1"], ["0.1", "10"], ["1", "1e4"]],
+    "mc_tau_tokens": ["1e-4", "0.1", "1", "10", "1e4"],
+    "mc_policy_tags": ["identity", "optimal", "quarter"]
+  },
+  "c": {
+    "boundary_exponents": [1, 2, 3, 4, 5, 6],
+    "noise_distinct_additional_exponents": [7, 8],
+    "clean_etas": [0.1, 0.01, 0.001],
+    "covariance_offsets": [[0,0],[1,0],[2,0],[3,0],[4,0],[0,1],[0,2],[0,3],[0,4],[1,1],[1,-1],[1,2],[1,-2],[2,1],[2,-1],[2,2]],
+    "covariance_radius_numerators": [0.25, 0.5, 0.9],
+    "covariance_radius_denominator": 15744.0
+  },
+  "d": {
+    "e2_config_path": "experiments/controlled_protocol/e2/e2_config.yaml",
+    "timesteps": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "knot_timesteps": [999, 750, 500, 250, 0],
+    "expected_alpha_bar_knots": [4.0358297653756754e-05, 0.0033001583615694255, 0.07779665836502386, 0.5214230306185275, 0.9999],
+    "expected_u_knots": [-0.8431394319417529, -0.475873267284342, -0.2060556053881204, 0.00714538481207612, 0.76752003058133],
+    "bins": 20,
+    "bin_width": 50,
+    "ratio_denominator_floor": 1e-12,
+    "bin_capture_denominator_floor": 1e-10,
+    "float32_runtime_resolution": {
+      "operation_count": 8,
+      "comparison_path_factor": 2
+    },
+    "advisory_reference_thresholds": {
+      "overall_capture_min": 0.95,
+      "bin_capture_min": 0.90,
+      "max_per_coordinate_regret": 0.0001,
+      "mean_per_coordinate_regret": 0.00001
+    }
+  }
+}
