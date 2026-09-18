@@ -1,4 +1,4 @@
-# E2-v2 True-Time Conditioning Experiment
+# True-Time Conditioning Experiment
 
 ## Purpose
 
