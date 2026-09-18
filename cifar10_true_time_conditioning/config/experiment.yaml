@@ -1,0 +1,131 @@
+experiment_name: E2-v2 True-Time Conditioning
+protocol_id: E2-V2-FINAL-THEORY-ALIGNED-v1
+theory_reference: theory.md
+dataset: CIFAR-10
+dataset_root: experiments/e2_v2_true_time_conditioning/runtime/data/cifar10
+common_predictor_init: experiments/e2_v2_true_time_conditioning/runtime/data/common_predictor_init.pt
+split_file: experiments/e2_v2_true_time_conditioning/runtime/data/splits.npz
+validation_bank_file: experiments/e2_v2_true_time_conditioning/runtime/data/validation_bank.npz
+validation_noise_file: experiments/e2_v2_true_time_conditioning/runtime/data/validation_noise.npy
+evaluation_bank_file: experiments/e2_v2_true_time_conditioning/runtime/data/evaluation_bank.npz
+evaluation_noise_file: experiments/e2_v2_true_time_conditioning/runtime/data/evaluation_noise.npy
+runs_root: experiments/e2_v2_true_time_conditioning/runtime/runs
+evaluation_root: experiments/e2_v2_true_time_conditioning/runtime/evaluation
+mechanism_root: experiments/e2_v2_true_time_conditioning/runtime/mechanism
+
+conditions:
+  - fixed
+  - static_pre
+  - static_post
+  - time_pre
+  - time_post
+  - time_pre_null
+
+adapter_parameter_counts:
+  fixed: 0
+  static_pre: 81
+  static_post: 81
+  time_pre: 405
+  time_post: 405
+  time_pre_null: 405
+
+diffusion:
+  timesteps: 1000
+  beta_start: 0.0001
+  beta_end: 0.02
+  knot_timesteps: [999, 750, 500, 250, 0]
+
+data:
+  split_root_seed: 20260917
+  train_images: 40000
+  validation_images: 5000
+  evaluation_images: 5000
+  train_per_class: 4000
+  validation_per_class: 500
+  evaluation_source: cifar10_train_holdout
+  evaluation_train_holdout_field: unused_train_indices
+
+model:
+  input_channels: 3
+  predictor_width: 64
+  residual_blocks: 4
+  group_norm_groups: 8
+  group_norm_epsilon: 0.00001
+  time_embedding_dim: 128
+  adapter_kernel_size: 3
+
+training:
+  seed: 42
+  steps: 200000
+  batch_size: 128
+  optimizer: AdamW
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1.0e-8
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  warmup_steps: 2000
+  peak_learning_rate: 0.0002
+  final_learning_rate: 0.000002
+  precision: float32
+  validation_every: 5000
+  log_every: 100
+
+validation:
+  bins: 20
+  bin_width: 50
+  images: 5000
+  per_class: 500
+  draws_per_image_bin: 2
+  true_time_root_seed: 101002
+  null_time_root_seed: 101003
+  noise_root_seed: 101004
+  batch_size: 128
+
+evaluation:
+  bins: 20
+  bin_width: 50
+  images: 5000
+  draws_per_image_bin: 2
+  true_time_root_seed: 101102
+  null_time_root_seed: 101103
+  noise_root_seed: 101104
+  batch_size: 128
+
+analysis:
+  bootstrap_replicates: 10000
+  bootstrap_seed: 101201
+  quantiles: [0.025, 0.975]
+  quantile_method: linear
+  support_rule: paired_95_percent_interval_entirely_below_zero
+  contrasts:
+    D_time: [time_pre, static_pre]
+    D_pre_static: [static_pre, static_post]
+    D_pre_time: [time_pre, time_post]
+    D_true_time: [time_pre, time_pre_null]
+
+mechanism:
+  time_grid: bin_centers
+  operator_batch_size: 128
+  factorization_projector: block_constant_projector_Pc_transpose_Pc
+  report_pre_conditions: [static_pre, time_pre, time_pre_null]
+
+rng_namespaces:
+  predictor_initialization: 420001
+  adapter_initialization: 420002
+  data_order: 3001
+  timestep_sampling: 4001
+  null_conditioning_timestep: 4002
+  corruption_noise: 420005
+
+runtime:
+  device: cuda:0
+  training_dtype: float32
+  amp_enabled: false
+  cuda_matmul_tf32: false
+  cudnn_tf32: false
+  cudnn_benchmark: false
+  cudnn_deterministic: true
+  compile_enabled: false
+  cooldown_after_validation_seconds: 30
+  inter_condition_idle_cooldown_seconds: 60

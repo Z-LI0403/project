@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+
+runtime/data/*
+!runtime/data/.gitkeep
+runtime/runs/*
+!runtime/runs/.gitkeep
+runtime/evaluation/*
+!runtime/evaluation/.gitkeep
+runtime/mechanism/*
+!runtime/mechanism/.gitkeep
+runtime/*.json
+results.md
