@@ -1,4 +1,4 @@
-# E2-v2 True-Time Conditioning
+# True-Time Conditioning
 
 This directory contains the runnable source package for the E2-v2 controlled
 CIFAR-10 experiment. The experiment compares fixed, static, true-time, and
