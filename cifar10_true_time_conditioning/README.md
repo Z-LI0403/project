@@ -9,7 +9,7 @@ supporting bridge comparison.
 ## Package layout
 
 ```text
-true_time_conditioning/
+cifar10_true_time_conditioning/
 ├── README.md
 ├── PROTOCOL.md
 ├── .gitignore
